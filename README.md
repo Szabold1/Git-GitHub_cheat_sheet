@@ -4,9 +4,7 @@
   <a href="#about">About</a> &#xa0; | &#xa0; 
   <a href="#basics">Basics</a> &#xa0; | &#xa0;
   <a href="#undo-things">Undo things</a> &#xa0; | &#xa0;
-  <a href="#usage">Usage</a> &#xa0; | &#xa0;
-  <a href="#allowed-functions">Allowed functions</a> &#xa0; | &#xa0;
-  <a href="https://github.com/Szabold1" target="_blank">Author</a>
+  <a href="#branches">Branches</a> &#xa0; | &#xa0;
 </p>
 
 <br>
@@ -67,6 +65,68 @@ git push
 git restore filename
 # older way
 git checkout -- filename
+```
+
+- Revert a given commit (create a new commit that undoes changes introduced by the specified commit):
+
+```shell
+git revert commit_hash
+```
+
+- ⚠️ Reset the current branch to a specific commit (delete commits):
+
+```shell
+# undo commits, keep changes in your working directory
+git reset commit_hash
+# undo commits, keep changes staged
+git reset --soft commit_hash
+# undo commits, discard all changes
+git reset --hard commit_hash
+# undo last commit, keep changes in your working directory
+git reset HEAD~1
+```
+
+## Branches
+
+- Create a new branch:
+
+```shell
+git branch branchname
+```
+
+- Create and switch to a new branch in one step:
+
+```shell
+git checkout -b branch_name
+
+```
+
+- Switch to a different branch:
+
+```shell
+git checkout branchname
+```
+
+- Merge a branch into the current branch:
+
+```shell
+# if you are on the main branch, this will merge branchname into main
+git merge branchname
+```
+
+- List all branches:
+
+```shell
+git branch
+```
+
+- Delete a branch:
+
+```shell
+# delete a branch only if it has already been fully merged into the current branch
+git branch -d branchname
+# delete a branch forcefully, even if it contains unmerged changes
+git branch -D branchname
 ```
 
 <br>
