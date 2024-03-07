@@ -57,7 +57,7 @@ git commit -m "Commit message"
 - `Wikis`: documentation pages that allow project maintainers and contributors to create and maintain documentation directly within the repository.
 - `Project boards`: provide a visual way to organize and track tasks, issues, and pull requests within a project.
 - `Fork`: to contribute to a project hosted on GitHub, you start by forking the repository. Forking creates a copy of the original repository under your GitHub account.
-- `Clone`: after forking, clone your forked repository to your local machine using the git clone command.
+- `Clone`: you can clone a repository to your local machine using the git clone command.
 
 ```shell
 git clone repository_url
