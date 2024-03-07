@@ -17,8 +17,9 @@
 
 ## Basics
 
+### Git
+
 - Install git from [here](https://git-scm.com/downloads).
-- Create a GitHub account [here](https://github.com/).
 - Configure git: set up your name and email using the following commands:
 
 ```shell
@@ -49,11 +50,40 @@ git add filename
 git commit -m "Commit message"
 ```
 
-- Push changes to GitHub:
+### GitHub
+
+- Create a GitHub account [here](https://github.com/).
+- `README` file: contains important information about a project or repository, written in Markdown format.
+- `Wikis`: documentation pages that allow project maintainers and contributors to create and maintain documentation directly within the repository.
+- `Project boards`: provide a visual way to organize and track tasks, issues, and pull requests within a project.
+- `Fork`: to contribute to a project hosted on GitHub, you start by forking the repository. Forking creates a copy of the original repository under your GitHub account.
+- `Clone`: after forking, clone your forked repository to your local machine using the git clone command.
+
+```shell
+git clone repository_url
+```
+
+- `Push` changes to GitHub:
 
 ```shell
 # push to the current branch
 git push
+# push to the main branch on the remote repository named origin
+git push origin main
+```
+
+- `Pull requests`
+
+  - After pushing your changes to your forked repository, you can create a pull request to propose your changes to the original repository.
+  - On your forked repository page on GitHub, click the "New pull request" button.
+  - Once a pull request is created, other contributors can review the changes, provide feedback, and suggest improvements.
+  - After the changes have been reviewed and approved, a project maintainer can merge the pull request into the original repository.
+  - Pull requests can be closed if the changes are no longer needed or if they are not suitable for merging. Contributors can close their own pull requests or project maintainers can close them if necessary.
+
+- Display the URLs of the remote repositories associated with your local Git repository:
+
+```shell
+git remote -v
 ```
 
 ## Undo things
@@ -117,7 +147,10 @@ git merge branchname
 - List all branches:
 
 ```shell
+# list local branches in your repository
 git branch
+# list local and remote branches in your repository
+git branch -a
 ```
 
 - Delete a branch:
